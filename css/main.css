@@ -1,0 +1,28 @@
+:root {
+    --font-sans-serif: 'Space Grotesk', sans-serif;
+    --font-mono: 'Cousine', monospace;
+    --main: #34d601;
+    --black: #20231f;
+    --gray: #484b47;
+    --gray2: #8f908e;
+    --gray3: #e9e9e9;
+    --white: #fff;
+}
+
+/* Box Hack */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    color: var(--black);
+}
+
+.copy {
+    line-height: 1.4em;
+    font-size: 24px;
+}
