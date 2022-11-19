@@ -10,12 +10,15 @@
 }
 
 /* Box Hack */
+
 html {
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+/* Typeography */
 
 body {
     font-family: var(--font-sans-serif);
@@ -25,4 +28,67 @@ body {
 .copy {
     line-height: 1.4em;
     font-size: 24px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h2 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
+.main-title {
+    font-size: 78px;
+}
+
+.main-title--dark {
+    color: var(--white);
+
+    /*for example purpose*/
+    background-color: var(--black);
+}
+
+.title-tag {
+    border: 1px solid var(--black);
+    display: block;
+    width: fit-content;
+    padding: 5px 5px 3px;
+    border-radius: 4px;
+}
+
+.title-tag--dark {
+    border: 1px solid var(--gray1);
+    color: var(--gray2);
+
+    /*for example purpose*/
+    background-color: var(--black);
+}
+
+/* needs work to make it a toggle switch */
+
+.title-tag--active:hover {
+    cursor: pointer;
+}
+
+.title-tag--active:active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* component */
+
+.component img {
+    max-width: initial;
+}
+
+.component__img {
+    border: 1px solid #ccc;
+    overflow-x: auto;
+}
+
+.component__code {
+    border: 1px solid #ccc;
 }
