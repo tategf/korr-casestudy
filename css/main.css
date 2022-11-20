@@ -39,13 +39,26 @@ img {
     display: block;
 }
 
+h1 {
+    font-size: 78px !important;
+    line-height: 1em;
+}
+
 h2 {
     font-family: var(--font-mono);
     font-size: 12px;
 }
 
+/* temp h3 for component page */
+
+h3 {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    padding-top: 1.5em;
+}
+
 .main-title {
-    font-size: 78px;
+    color: var(--black);
 }
 
 .main-title--dark {
