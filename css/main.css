@@ -35,6 +35,10 @@ body {
     padding: 5% 15%;
 }
 
+body, h1, h2 {
+    margin: 0;
+}
+
 .copy {
     line-height: 1.4em;
     font-size: 24px;
@@ -50,10 +54,12 @@ a {
 
 ::-moz-selection { /* Code for Firefox */
     background: var(--main);
+    color: var(--black);
   }
   
   ::selection {
     background: var(--main);
+    color: var(--black);
   }
 
 img {
@@ -61,26 +67,16 @@ img {
     display: block;
 }
 
-h1 {
-    font-size: 78px !important;
-    line-height: 1.05em;
-}
-
 h2 {
     font-family: var(--font-mono);
     font-size: 12px;
 }
 
-/* temp h3 for component page */
-
-h3 {
-    font-family: var(--font-mono);
-    font-size: 24px;
-    padding-top: 1.5em;
-}
-
 .main-title {
+    font-family: var(--font-sans-serif);
     color: var(--black);
+    font-size: 78px !important;
+    line-height: 1.05em;
 }
 
 .main-title--dark {
@@ -99,7 +95,7 @@ h3 {
 }
 
 .title-tag--dark {
-    border: 1px solid var(--gray1);
+    border: 1px solid var(--gray);
     color: var(--gray2);
 
     /*temp for example purpose*/
@@ -202,8 +198,37 @@ header {
     gap: 1em;
 }
 
+/* Footer section */
+/* ------------------------------------ */
+
+footer {
+    background-color: var(--black);
+    margin: 0;
+    padding: 10em;
+}
+
+.footer-main__copy {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
 /* component */
 /* ------------------------------------ */
+
+.component__name {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    padding-top: 1.5em;
+    border-bottom: solid var(--black) 3px;
+    padding-bottom: .5em;
+    width: fit-content;
+}
+
+.componenet__tag-space {
+    margin-top: 5em;
+    margin-bottom: -2em;
+}
 
 .component img {
     max-width: initial;
