@@ -144,10 +144,19 @@ h3 {
     width: 0;
 }
 
-.navbar-logo--active {
+.navbar-logo--scroll {
     opacity: 1;
     pointer-events: all;
     width: 1;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    font-size: 19px;
+    line-height: 120%;
+    box-shadow: 0 0 6px rgb(0 0 0 / 12%);
+    border-radius: var(--radius1);
+    width: fit-content;
 }
 
 .navbar-list>li, .navbar-logo {
@@ -181,7 +190,7 @@ a, ul, li {
     color: #000;
 }
 
-.navbar-logo:hover {
+.navbar-logo--scroll:hover {
     background-color: var(--black);
     color: var(--white);
 }
