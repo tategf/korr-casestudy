@@ -35,7 +35,7 @@ body {
     padding: 5% 15%;
 }
 
-body, h1, h2 {
+body, h1, h2, p {
     margin: 0;
 }
 
@@ -88,7 +88,7 @@ h2 {
 
 .title-tag {
     border: 1px solid var(--black);
-    display: block;
+    display: inline-block;
     width: fit-content;
     padding: 5px 5px 3px;
     border-radius: var(--radius1)
@@ -201,16 +201,82 @@ header {
 /* Footer section */
 /* ------------------------------------ */
 
-footer {
+.footer-main-container {
+    display: grid;
+    /* grid-template-columns: repeat(12,minmax(0,1fr)); */
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 20px;
     background-color: var(--black);
     margin: 0;
-    padding: 10em;
+    /* temp */
+    padding: 2em;
 }
 
 .footer-main__copy {
     color: var(--white);
     font-size: 16px;
     line-height: 1.5em;
+}
+
+.footer-main__tag {
+    grid-column: 1/2;
+}
+
+.footer-main__text {
+    grid-column: 2/7;
+}
+
+/* Still needs some work, I have a general sense of how this section might work */
+
+.footer-aside {
+    /* display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr)); */
+
+    border-radius: 16px;
+    overflow: hidden;
+    grid-column: span 4/-1;
+    background-color: var(--white);
+    color: var(--black);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.footer-aside1 {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+    /* grid-column: 1/-1;
+    grid-row: 1/-1; */
+}
+
+.footer-aside__img-container {
+    position: relative;
+    padding-bottom: 80%;
+    background-color: var(--gray3);
+}
+
+.footer-aside__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.footer-aside-text-container {
+    padding: 1em;
+    padding-top: 1.2em;
+}
+
+.footer-aside__tag {
+    margin-bottom: 1em;
 }
 
 /* component */
