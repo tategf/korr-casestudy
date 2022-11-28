@@ -50,6 +50,7 @@ a {
     letter-spacing: .5px;
     white-space: nowrap;
     font-size: 16px;
+    font-weight: 300;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -205,8 +206,7 @@ header {
 .footer-main-container {
     position: relative;
     display: grid;
-    /* grid-template-columns: repeat(12,minmax(0,1fr)); */
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12,minmax(0,1fr));
     grid-template-rows: 4fr 1fr;
     grid-column-gap: 2em;
     background-color: var(--black);
@@ -225,16 +225,23 @@ header {
     grid-column: 1/2;
 }
 
+/* to keep copy width matching that of header */
+
 .footer-main__text {
     grid-column: 2/7;
+    width: fit-content;
 }
 
-/* Still needs some work, weird hanging padding on shrink, I have a general sense of how this section might work */
+/* to keep title from wrapping without needing fixed width, might change */
+
+.footer-main__text h2 {
+    white-space: nowrap;
+    word-break: break-word;
+}
 
 .footer-aside {
     /* display: grid;
     grid-template-columns: repeat(1,minmax(0,1fr)); */
-
     border-radius: 16px;
     overflow: hidden;
     grid-column: span 4/-1;
@@ -242,6 +249,14 @@ header {
     color: var(--black);
     pointer-events: all;
     cursor: pointer;
+
+    /* padding gap fix */
+    height: fit-content;
+
+    width: 100%;
+
+    /* fix to keep aside from shrinking too much, might rework later */
+    min-width: 300px;
 }
 
 .footer-aside1 {
@@ -251,6 +266,8 @@ header {
     cursor: pointer;
     /* grid-column: 1/-1;
     grid-row: 1/-1; */
+    overflow: hidden;
+
 }
 
 .footer-aside__img-container {
