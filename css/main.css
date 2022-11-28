@@ -207,12 +207,12 @@ header {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: fit-content 1fr;
     grid-column-gap: 2em;
     background-color: var(--black);
-    margin: 0;
     /* temp */
     padding: 2em;
+    row-gap: 3em;
 }
 
 .footer-main__copy {
@@ -302,15 +302,24 @@ header {
 /* Not sure how to get these links to wrap to the sub columns */
 
 .footer-links {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1/span 3;
     grid-row: 2/3;
     display: flex;
     align-self: flex-end;
 }
 
+.footer-links ul {
+    column-count: 3;
+    grid-column-gap: 2em;
+    min-width: 100%;
+}
+
 .footer-links a {
     color: var(--white);
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 
@@ -320,6 +329,7 @@ header {
     align-self: flex-end;
     height: fit-content;
     color: var(--white);
+    font-size: 14px;
 }
 
 /* component */
