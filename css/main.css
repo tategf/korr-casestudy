@@ -53,6 +53,10 @@ a {
     font-weight: 300;
 }
 
+a, p {
+    line-height: 1.5em;
+}
+
 ::-moz-selection { /* Code for Firefox */
     background: var(--main);
     color: var(--black);
@@ -218,7 +222,6 @@ header {
 .footer-main__copy {
     color: var(--white);
     font-size: 16px;
-    line-height: 1.5em;
 }
 
 .footer-main__tag {
