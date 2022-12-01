@@ -36,7 +36,7 @@ body {
 }
 
 /* !important seems to be needed for h1 margins to work properly, might be something in the normalize.css */
-body, h1, h2, p, ul, li {
+body, h1, h2, p, ul, ol, li {
     margin: 0 !important;
 }
 
@@ -169,11 +169,11 @@ h2 {
     display: inline-block;
 }
 
-ul {
+ul, ol {
     list-style: none;
 }
 
-a, ul, li {
+a, ul, ol, li {
     margin: 0;
     padding: 0;
     border: 0;
