@@ -414,7 +414,7 @@ header {
 /* Intro Section */
 /* ------------------------------------ */
 
-.intro {
+.intro, .products {
     margin: 1.5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -477,6 +477,16 @@ header {
     transform: rotate(-45deg);
     margin-right: 12px;
 }
+
+/* Products */
+/* ------------------------------------ */
+
+/* .products grid setup is above in intro section to reduce redundency */
+
+.products-left {
+    grid-column: 1 / 2;
+}
+
 
 /* component */
 /* ------------------------------------ */
