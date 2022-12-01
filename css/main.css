@@ -389,21 +389,13 @@ header {
     font-family: var(--font-substitute);
     font-size: 13px;
     font-weight: 400;
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-    -ms-transition: background-color 0.3s;
-    -o-transition: background-color 0.3s;
-    transition: background-color 0.3s;
+    transition: all .3s cubic-bezier(.4,0,0,1);
 }
 
 .button--hover:hover {
     color: var(--white);
     background-color: var(--main);
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    -ms-transition: background-color 0.2s;
-    -o-transition: background-color 0.2s;
-    transition: background-color 0.2s;
+    transition: all .3s cubic-bezier(.4,0,0,1);
 }
 
 .hero-video {
@@ -422,7 +414,69 @@ header {
 /* Intro Section */
 /* ------------------------------------ */
 
+.intro {
+    margin: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
 
+.intro-left {
+    grid-column: 1 / 2;
+}
+
+.intro-links {
+    grid-column: 2 / -1;
+}
+
+.intro-links ol {
+    text-align: end;
+}
+
+.full-copy-wrap {
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    grid-column-gap: 2em;
+    /* temp */
+    padding: 2em 0em;
+}
+
+.tag-wrap {
+    grid-column: 1 / 2;
+}
+
+.copy-wrap {
+    grid-column: 2 / -1;
+}
+
+.intro-link {
+    color: var(--gray2);
+    transition: all .3s cubic-bezier(.4,0,0,1);
+}
+
+.intro-link--hover:hover {
+    transition: all .3s cubic-bezier(.4,0,0,1);
+    color: var(--main);
+    display:list-item;
+}
+
+/* Before places content prior to the list item, border setup makes a > looking object to fill this blank content, hover replaces the none display making this visible and inline-block makes sure the content and links align side by side */
+
+.intro-links a:hover:before {
+    display: inline-block;
+}
+
+.intro-links a:before {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-right: 12px;
+}
 
 /* component */
 /* ------------------------------------ */
