@@ -29,10 +29,6 @@ html {
 body {
     font-family: var(--font-sans-serif);
     color: var(--black);
-
-    /* temp formatting */
-    margin: auto;
-    padding: 5% 5%;
 }
 
 /* !important seems to be needed for h1 margins to work properly, might be something in the normalize.css */
@@ -629,4 +625,70 @@ header {
 
 .component__code img {
     max-width: 100%;
+}
+
+.comp-wrap {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.comp-left {
+    position: fixed;
+    background-color: var(--black);
+    height: 100%;
+    padding-top: 4em;
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+}
+
+.comp-nav ul {
+    /* border: red solid; */
+}
+
+.comp-nav a {
+    width: 12ch;
+    margin: auto;
+    padding: .5em;
+    /* border: red solid; */
+    font-family: var(--font-mono);
+    color: var(--gray2);
+    font-size: smaller;
+    display: block;
+}
+
+.comp-nav a:hover {
+    color: var(--white);
+}
+
+.comp-right {
+    grid-column: 2/3;
+    overflow: hidden;
+    position: relative;
+    padding:4em;
+    margin-left: 15%;
+}
+
+
+.comp-nav a:hover {
+    transition: all .3s cubic-bezier(.4,0,0,1);
+    color: var(--white);
+    display:list-item;
+}
+
+.comp-nav a:hover:after {
+    display: inline-block;
+}
+
+.comp-nav a:after {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--gray3);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-right: 12px;
 }
