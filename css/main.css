@@ -522,6 +522,7 @@ header {
     grid-template-columns: repeat(5,minmax(0,1fr));
     grid-column-gap: 2em;
     padding: 2em 0em;
+    cursor: pointer;
 }
 
 .sub-tag-wrap {
@@ -531,6 +532,68 @@ header {
 .sub-copy-wrap {
     grid-column: 2 / 6;
 }
+
+.sub-copy {
+    color: var(--gray2);
+}
+
+/* Seems like I may need to turn this into a radio input or something to keep the effect active */
+.sub-copy:active {
+    color: var(--black);
+}
+
+/* Unsure on best method to couple these active states, still needs work */
+.title-tag--active:active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.product-slides {
+    grid-column: 8 / 11;
+    position: relative;
+}
+
+.product-slide {
+    position: absolute;
+}
+
+.product-slide-top {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 14px;
+}
+
+.product-slides__title {
+    color: var(--white);
+}
+
+.product-slides__number {
+    color: var(--gray2);
+}
+
+#product1,
+#product2,
+#product3,
+#product4 {
+  display: none;
+}
+
+#product1:target {
+    display: block;
+}
+#product2:target {
+    display: block;
+}
+#product3:target {
+    display: block;
+}
+#product4:target {
+    display: block;
+}
+  
 
 
 /* component */
@@ -562,4 +625,8 @@ header {
 
 .component__code {
     border: 1px solid #ccc;
+}
+
+.component__code img {
+    max-width: 100%;
 }
