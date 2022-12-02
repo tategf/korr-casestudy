@@ -18,6 +18,9 @@
 
 html {
     box-sizing: border-box;
+
+    /* temp for showcase */
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -597,16 +600,11 @@ header {
 
 .component__name {
     font-family: var(--font-mono);
-    font-size: 24px;
-    padding-top: 1.5em;
-    border-bottom: solid var(--black) 3px;
-    padding-bottom: .5em;
+    font-size: 15px;
     width: fit-content;
-}
-
-.componenet__tag-space {
-    margin-top: 5em;
-    margin-bottom: -2em;
+    margin: 0 !important;
+    color: var(--gray2);
+    padding-bottom: 1em;
 }
 
 .component img {
@@ -614,13 +612,14 @@ header {
 }
 
 .component__img {
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray);
     overflow-x: auto;
-    margin: 2em 0;
+    background-color: white;
 }
 
 .component__code {
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray);
+    background-color: white;
 }
 
 .component__code img {
@@ -668,6 +667,23 @@ header {
     position: relative;
     padding:4em;
     margin-left: 15%;
+}
+
+.comp-right>h1 {
+    font-family: var(--font-substitute);
+    font-size: 2.5em;
+}
+
+.comp-right>h2 {
+    font-size: .9em;
+    margin: 2em 0 !important;
+}
+
+.component {
+    background-color: var(--black);
+    padding: 1.5em;
+    /* border-radius: var(--radius2); */
+    margin: 2em 0;
 }
 
 
