@@ -418,7 +418,11 @@ header {
     margin: 1.5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
+    gap: 2em;
+}
+
+.products {
+   grid-column: 1 / -1;
 }
 
 .intro-left {
@@ -485,6 +489,47 @@ header {
 
 .products-left {
     grid-column: 1 / 2;
+}
+
+.slide-wrap {
+    grid-column: 2 / 6;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-rows: fit-content;
+    grid-column-gap: 2em;
+    margin: 1.5em;
+}
+
+.slide-wrap a {
+    white-space: normal;
+    font-family: inherit;
+    text-decoration: none;
+    letter-spacing: normal;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+    color: inherit;
+}
+
+.slide-select {
+    grid-column: 2 / 7;
+}
+
+.slide-description a {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    grid-column-gap: 2em;
+    padding: 2em 0em;
+}
+
+.sub-tag-wrap {
+    grid-column: 1 / 2;
+}
+
+.sub-copy-wrap {
+    grid-column: 2 / 6;
 }
 
 
