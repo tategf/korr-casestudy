@@ -446,7 +446,7 @@ header {
 }
 
 .copy-wrap {
-    grid-column: 2 / -1;
+    grid-column: 3 / -1;
 }
 
 .intro-link {
@@ -526,7 +526,7 @@ header {
 }
 
 .sub-copy-wrap {
-    grid-column: 2 / 6;
+    grid-column: 3 / 6;
 }
 
 .sub-copy {
@@ -592,6 +592,8 @@ header {
 
 /* Testimonials */
 /* ------------------------------------ */
+
+/* Rename classes to fit better*/
   
 .testimonials {
     position: relative;
@@ -639,23 +641,22 @@ header {
     border-radius: var(--radius2);
     overflow: hidden;
     position: relative;
+    max-width: 100%;
+
+    /* Might need some more tweaking to get functioning the same */
+    padding-bottom: 100vh;
+    height: 0px;
 }
 
 .grid-right>img {
-    height: 100%;
-    object-fit: cover;
-    /* position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 0;
-    width: 0;
+    position: absolute;
+    width: 0px;
+    height: 0px;
     min-width: 100%;
-    min-height: 100%;
-    width: 100%;
     max-width: 100%;
-    max-height: 100%; */
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .grid-nav {
@@ -693,12 +694,79 @@ header {
     text-align: right;
 }
 
+/* Learn More */
+/* ------------------------------------ */
+
+.learn-more {
+    margin: 1.5em;
+}
+
+.large-copy-wrap {
+    padding-top: 10em;
+    padding-bottom: 4em;
+}
+
+.large-copy {
+    font-size: 30px;
+}
+
+.learn-more a {
+    white-space: normal;
+    font-family: inherit;
+    text-decoration: none;
+    letter-spacing: normal;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+    color: inherit;
+}
+
+.itb-gap {
+    padding: 1em 0;
+}
+
+.itb {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5em;
+}
+
+.itb-left {
+    grid-column: 1/ 2;
+}
+
+.itb-right {
+    grid-column: 2 /3;
+}
+
+.itb__img {
+    padding-bottom: 37%;
+    position: relative;
+    border-radius: var(--radius2);
+    overflow: hidden;
+}
+
+.itb__img img {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.itb__copy {
+    font-size: 14px;
+}
+
 /* component */
 /* ------------------------------------ */
 
 .comp-base {
     /* temp for showcase */
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     /* background-color: #282a28; */
 }
 
@@ -739,7 +807,7 @@ header {
 .comp-left {
     position: fixed;
     background-color: var(--black);
-    height: 20em;
+    height: 22em;
     width: 12%;
     min-width: 175px;
     /* overflow: auto; */
