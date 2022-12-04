@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="comp-base">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Space+Grotesk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <!-- <script src="/js/main.js"></script> -->
 
     <!-- Intended to remove anchor jumps in product section but isn't functioning correctly -->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
             $(".prevent").click(function(e) { //Note the e for event
             e.preventDefault();
             });
         });
-    </script>
+    </script> -->
+    
 
 </head>
 <body>
@@ -345,7 +347,7 @@
                 </div>
                 <br>
                 <div class="component__img">
-                    <img srcset="img/intro/intro-links.png 2x" src="img/intro/intro-links.png" alt="intro">
+                    <img srcset="img/intro/intro-links.png 2x" src="img/intro/intro-links.png" alt="Intro links">
                 </div>
                 <br>
                 <div class="component__code">
@@ -362,7 +364,7 @@
             <article class="component" id="products">
                 <h3 class="component__name">Products</h3>
                 <div class="component__img">
-                    <img srcset="img/products/products.png 2x" src="img/products/products.png" alt="intro">
+                    <img srcset="img/products/products.png 2x" src="img/products/products.png" alt="Products slider section">
                 </div>
                 <br>
                 <div class="component__code">
@@ -457,8 +459,98 @@
                 </div>
         
             </article>
+
+            <!-- Testimonials -->
+            <article class="component" id="testimonials">
+                <h3 class="component__name">Testimonials</h3>
+                <div class="component__img">
+                    <img srcset="img/testimonials/testimonials.png 2x" src="img/testimonials/testimonials.png" alt="Testimonials">
+                </div>
+                <br>
+                <div class="component__code">
+
+                    <div class="testimonials">
+                        <div class="testimonial-wrap">
+                            <div class="grid-left">left</div>
+                            <div class="grid-right">right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br>right<br></div>
+                        </div>
+
+                        <nav class="grid-nav">
+                            <ul>
+                                <li>previous</li>
+                                <li>1/3</li>
+                                <li>next</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+            </article>
         </div>
     </div>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://cdn.sanity.io/images/nwzoe7sd/production/e56d48426e77fe08c511aeb49e94dc6e2ac7e147-2543x2797.png" style="width:100%;">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://cdn.sanity.io/images/nwzoe7sd/production/b0c619b33cb39868522610c732ce69dcbeb3f5e5-2543x2797.png" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://cdn.sanity.io/images/nwzoe7sd/production/6edcf6d2f0f3e74b5863ede61a6e73a2c1f821df-2543x2797.png" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
 
 </body>
 </html>
