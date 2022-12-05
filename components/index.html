@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Space+Grotesk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/normalize.css">
+
+    <!-- js related WIP ignore -->
+
     <!-- <script src="/js/main.js"></script> -->
 
     <!-- Intended to remove anchor jumps in product section but isn't functioning correctly -->
@@ -47,7 +50,9 @@
         </div>
         <div class="comp-right">
             <h1>KOR WEB COMPONENTS</h1>
+
             <!-- Typeography Defaults -->
+        <!--/////////////////////////////////-->
             <h2>> Typography Defaults</h2>
             <article class="component" id="body">
                 <h3 class="component__name">body</h3>
@@ -77,9 +82,13 @@
                     <h2 class="title-tag title-tag--active">Concept</h2><br>
                 </div>
             </article>
+
             <!-- Main Navigation Sections -->
+        <!--/////////////////////////////////-->
             <h2>> Main Navigation</h2>
+
             <!-- Header Section -->
+        <!------------------------------------->
             <article class="component" id="header">
                 <h3 class="component__name">header / main nav / scroll</h3>
                 <div class="component__img">
@@ -87,6 +96,7 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- Main header/navbar before scroll -->
                     <header>
                         <div class="logo-container">
                             <a href="#!">
@@ -118,6 +128,7 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- Navbar with hidden logo -->
                     <header>
                         <div class="header-navbar-container">
                             <div class="navbar-logo">
@@ -142,6 +153,7 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- Scrolling navbar with visible logo -->
                     <header>
                         <div class="header-navbar-container">
                             <div class="navbar-logo--scroll">
@@ -161,7 +173,9 @@
                     </header>
                 </div>
             </article>
+
             <!-- Footer Section -->
+        <!------------------------------------->
             <article class="component" id="footer">
                 <h3 class="component__name">footer</h3>
                 <div class="component__img">
@@ -169,6 +183,7 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- Footer -->
                     <footer>
                         <div class="footer-main-container">
                             <div class="footer-main__tag">
@@ -221,6 +236,7 @@
                 </div>
                 <br>
                 <div class="component__code" style="padding: .7em; background-color: var(--black);">
+                    <!-- Footer aside-->
                     <aside class="footer-aside" style="max-width: 465px;">
                         <div class="footer-aside-1">
                             <div class="footer-aside__img-container">
@@ -241,9 +257,12 @@
                 </div>
             </article>
 
-            <!-- Main Navigation Sections -->
+            <!-- Main Content Sections -->
+        <!--/////////////////////////////////-->
             <h2>> Main Content</h2>
+
             <!-- Hero -->
+        <!------------------------------------->
             <article class="component" id="hero">
                 <h3 class="component__name">Hero</h3>
                 <div class="component__img">
@@ -251,7 +270,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-        
+                    <!-- Hero section -->
                     <div class="hero">
                         <div class="hero-flex">
                             <div class="hero-title">
@@ -281,7 +300,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-        
+                    <!-- Hero side -->
                     <div class="hero-side-wrap">
                         <div class="hero-side__copy">
                             <p>Korr is the first truly versatile insurance management tool. With Korr, insurance professionals develop and manage new and innovative insurance products in minutes.</p>
@@ -298,12 +317,15 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- Hero side buttons -->
                     <div style="padding: .5em;">
                         <a href="#!" class="button button--hover">See the Product</a>
                     </div>
                 </div>
             </article>
+
             <!-- Intro -->
+        <!------------------------------------->
             <article class="component" id="intro">
                 <h3 class="component__name">Intro</h3>
                 <div class="component__img">
@@ -311,7 +333,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-        
+                    <!-- Intro section -->
                     <div class="intro">
                         <div class="intro-left">
                             <p class="intro-excerpt copy">The insurance industry is almost unrecognizable from 20 years ago — except for the software. Agents and carriers are stuck with the same outdated packages that have limited growth for decades. Korr is leading the revolution.</p>
@@ -324,7 +346,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- For these to function properly links to # anchor tags for each section are still required -->
                         <div class="intro-links">
                             <ol>
                                 <li><a href="#why-korr" class="intro-link intro-link--hover">Why Korr</a></li>
@@ -339,7 +360,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-        
+                    <!-- Full copy wrap -->
                     <div class="intro">
                         <div class="full-copy-wrap">
                             <div class="tag-wrap">
@@ -358,7 +379,9 @@
                 </div>
                 <br>
                 <div class="component__code">
-                    <!-- For these to function properly links to # anchor tags for each section are still required, also need to remove width cap in HTML as this is just for display purposes -->
+                    <!-- Intro links -->
+
+                    <!-- Width cap used for display purposes -->
                     <div class="intro-links" style="width: 90px;">
                         <ol>
                             <li><a href="#why-korr" class="intro-link intro-link--hover">Why Korr</a></li>
@@ -367,7 +390,10 @@
                     </div>
                 </div>
             </article>
+
             <!-- Products -->
+        <!------------------------------------->
+            <!-- Possible rework with radio input and or js functionality in the future-->
             <article class="component" id="products">
                 <h3 class="component__name">Products</h3>
                 <div class="component__img">
@@ -375,7 +401,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-        
+                    <!-- Products section -->
                     <div class="products" id="product">
                         <div class="products-left">
                             <div class="full-copy-wrap">
@@ -464,10 +490,28 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="component__img">
+                    <img srcset="img/products/product-slides.png 2x" src="img/products/product-slides.png" alt="Products slide">
+                </div>
+                <br>
+                <div class="component__code">
+                    <!-- Product slide -->
+                        <!-- Changed for display purposes don't use -->
+                        <div class="prevent slide-example">
+                            <div class="product-slide-top product-slide-top-example">
+                                <div class="product-slides__title">Concept</div>
+                                <div class="product-slides__number">1/4</div>
+                            </div>
+                            <img src="https://cdn.sanity.io/images/nwzoe7sd/production/e56d48426e77fe08c511aeb49e94dc6e2ac7e147-2543x2797.png" alt="Concept slide">
+                        </div>
+                </div>
         
             </article>
 
             <!-- Testimonials -->
+        <!------------------------------------->
+            <!-- Possible rework with js functionality in the future, needs opacity change js setup rather than w3s version -->
             <article class="component" id="testimonials">
                 <h3 class="component__name">Testimonials</h3>
                 <div class="component__img">
@@ -476,6 +520,7 @@
                 <br>
                 <div class="component__code">
 
+                    <!-- Testimonial carousel/slider -->
                     <div class="testimonials">
 
                         <!-- Slide 1 -->
@@ -557,6 +602,7 @@
             </article>
 
             <!-- Learn More -->
+        <!------------------------------------->
             <article class="component" id="learn-more">
                 <h3 class="component__name">Learn More</h3>
                 <div class="component__img">
@@ -564,7 +610,7 @@
                 </div>
                 <br>
                 <div class="component__code">
-
+                    <!-- Learn more section -->
                     <section class="learn-more">
                         <div class="large-copy-wrap">
                             <!-- Change class so it's more universal? -->
@@ -615,6 +661,7 @@
                 </div>
                 <br>
                 <div class="component__code">
+                    <!-- image text block article -->
                     <article class="itb-left">
                         <a href="#!">
                             <div class="itb__img">
@@ -633,6 +680,8 @@
             </article>
         </div>
     </div>
+
+    <!-- js still work in progress please ignore-->
 
     <!-- Slideshow container -->
     
