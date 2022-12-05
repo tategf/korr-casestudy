@@ -149,8 +149,7 @@ h2 {
 .navbar-logo--scroll {
     opacity: 1;
     pointer-events: all;
-    width: 1;
-
+    width: 100%;
     display: flex;
     align-items: center;
     background-color: var(--white);
@@ -212,7 +211,7 @@ header {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-template-rows: fit-content 1fr;
+    grid-template-rows: min-content 1fr;
     grid-column-gap: 1.5em;
     background-color: var(--black);
     /* temp */
@@ -492,7 +491,7 @@ header {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-template-rows: fit-content;
+    grid-template-rows: min-content;
     grid-column-gap: 1.5em;
     margin: 1.5em;
 }
