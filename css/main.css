@@ -604,7 +604,7 @@ header {
     background-color: var(--black);
 }
 
-.testimonial-wrap {
+.t-wrap {
     position: relative;
     padding: 1.5em;
     color: var(--white);
@@ -613,9 +613,20 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, max-content);
     gap: 1.5em;
+    /* display: none; */
 }
 
-.grid-left-wrap {
+/* .t-wrap-fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  } */
+
+.t-left-wrap {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -630,13 +641,13 @@ header {
     font-size: 30px;
 }
 
-.grid-mid-left {
+.t-copy-wrap {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding-bottom: 1em;
 }
 
-.grid-right {
+.t-right {
     grid-row: span 3;
     border-radius: var(--radius2);
     overflow: hidden;
@@ -648,7 +659,7 @@ header {
     height: 0px;
 }
 
-.grid-right>img {
+.t-right>img {
     position: absolute;
     width: 0px;
     height: 0px;
@@ -659,7 +670,7 @@ header {
     object-fit: cover;
 }
 
-.grid-nav {
+.t-nav {
     position: absolute;
     grid-column: 1 / 2;
     min-width: 100%;
@@ -672,7 +683,7 @@ header {
     font-family: var(--font-sans-serif);
 }
 
-.grid-nav>ul {
+.t-nav>ul {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(6,minmax(0,1fr));
@@ -680,18 +691,36 @@ header {
     position: relative;
 }
 
-.prev {
+.t-prev {
     grid-column: span 3;
+    font-weight: 400;
+    line-height: inherit;
 }
 
-.numb {
+.t-prev:hover, .t-next:hover {
+    text-decoration: underline;
+}
+
+.t-number {
     grid-column: 4 / 6;
     text-align: right;
 }
 
-.next {
+.t-next {
     grid-column: 6 / 7;
     text-align: right;
+    font-weight: 400;
+    line-height: inherit;
+}
+
+.t-prev, .t-next {
+    cursor: pointer;
+}
+
+/* temp till js is worked out */
+
+.hide {
+    display: none !important;
 }
 
 /* Learn More */
