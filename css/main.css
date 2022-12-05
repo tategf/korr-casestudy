@@ -76,6 +76,7 @@ video {
 h2 {
     font-family: var(--font-mono);
     font-size: 12px;
+    font-weight: normal;
 }
 
 .main-title {
