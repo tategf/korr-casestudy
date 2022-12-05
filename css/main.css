@@ -123,6 +123,11 @@ h2 {
 /* header nav section */
 /* ------------------------------------ */
 
+.header-width {
+    margin: 1.5em;
+}
+
+
 .header-navbar-container {
     display: flex;
     gap: .5em;
@@ -788,10 +793,6 @@ header {
 
 .itb__copy {
     font-size: 14px;
-}
-
-.page-width {
-    margin: 1.5em;
 }
 
 /* component */
