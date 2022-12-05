@@ -221,7 +221,7 @@ header {
     grid-column-gap: 1.5em;
     background-color: var(--black);
     /* temp */
-    padding: 2em;
+    padding: 1.5em;
     row-gap: 3em;
 }
 
