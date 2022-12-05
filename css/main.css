@@ -739,7 +739,7 @@ header {
     font-size: 30px;
 }
 
-.learn-more a {
+.itb-left a, .itb-right a {
     white-space: normal;
     font-family: inherit;
     text-decoration: none;
@@ -795,7 +795,7 @@ header {
 
 .comp-base {
     /* temp for showcase */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     /* background-color: #282a28; */
 }
 
@@ -835,8 +835,6 @@ header {
 
 .comp-left {
     position: fixed;
-    background-color: var(--white);
-    box-shadow: 0 0 6px rgb(0 0 0 / 12%);
     height: 22em;
     width: 12%;
     min-width: 175px;
@@ -844,7 +842,6 @@ header {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 7px;
     margin-left: 1%;
 }
 
@@ -854,10 +851,14 @@ header {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    padding: 1.5em;
+    background-color: var(--white);
+    border-radius: 7px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 12%);
 }
 
 .comp-nav a {
-    width: 60%;
+    width: 115px;
     margin: auto;
     padding: .5em;
     /* border: red solid; */
@@ -867,21 +868,19 @@ header {
     display: block;
 }
 
-.comp-nav a:hover {
-    color: var(--white);
-}
-
 .comp-right {
     grid-column: 2/3;
     overflow: hidden;
     position: relative;
-    padding:4em 4em 4em 2%;
+    padding:3em 4em 2em 2%;
     margin-left: max(180px, 12.5%);
 }
 
 .comp-right>h1 {
     font-family: var(--font-substitute);
-    font-size: 2.5em;
+    font-size: 2.2em;
+    font-weight: 900;
+    color: var(--black);
 }
 
 .comp-right>h2 {
@@ -900,7 +899,7 @@ header {
 
 .comp-nav a:hover {
     transition: all .3s cubic-bezier(.4,0,0,1);
-    color: var(--white);
+    color: var(--black);
     display:list-item;
 }
 
@@ -913,15 +912,43 @@ header {
     display: none;
     width: 8px;
     height: 8px;
-    border-right: 1px solid var(--white);
-    border-bottom: 1px solid var(--gray3);
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     margin-right: 12px;
 }
 
+.comp-nav-gap {
+    padding-bottom: 1em;
+}
 
+.comp-nav-exlinks a:hover {
+    color: var(--main);
+}
 
+.comp-nav-exlinks {
+    border-top: 1px solid var(--gray3);
+    padding-top: 1em;
+}
+
+.comp-nav-exlinks a:hover {
+    transition: all .3s cubic-bezier(.4,0,0,1);
+    color: var(--main);
+    display:list-item;
+}
+
+.comp-nav-exlinks a:after {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid var(--main);
+    border-bottom: 1px solid var(--main);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-right: 12px;
+}
 
 
 
