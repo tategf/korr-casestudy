@@ -4,9 +4,346 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | KORR</title>
+    <title>Components | KORR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <h1>Homepage Goes Here Eventually</h1>
+        <!-- Header Section -->
+    <!------------------------------------->
+    <header class="page-width">
+        <div class="logo-container">
+            <a href="#!">
+                <div class="logo">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 30" width="68" height="30"><path d="M19.9,10.11h-6.78l-7.94,7.58V0H0V29.39H5.18v-7.58l7.9,7.58h7.18l-10.33-9.81,9.97-9.47Zm19.88,9.66c0-5.76-4.67-10.19-10.73-10.19s-10.77,4.55-10.77,10.19,4.59,10.23,10.69,10.23,10.81-4.47,10.81-10.23Zm-16.27,.04c0-3.22,2.27-5.53,5.5-5.53s5.54,2.31,5.54,5.53-2.31,5.57-5.54,5.57-5.5-2.35-5.5-5.57Zm30.59-9.89h-1.08c-3.11,0-5.26,1.33-6.3,4.05v-3.86h-4.94V29.39h5.02v-9.17c0-4.2,1.99-5.68,5.62-5.68h1.67v-4.62Zm13.9,0h-1.08c-3.11,0-5.26,1.33-6.3,4.05v-3.86h-4.94V29.39h5.02v-9.17c0-4.2,1.99-5.68,5.62-5.68h1.67v-4.62Z" fill="#20231F"></path></svg>
+                </div>
+            </a>
+        </div>
+        <div class="header-navbar-container">
+            <div class="navbar-logo">
+                <a href="#!" class="navbar__link">korr</a>
+            </div>
+            <div>
+                <nav class="header-navbar">
+                  <ul class="navbar-list">
+                    <li><a class="navbar__link navbar__link--hover" href="#!">Product</a></li>
+                    <li><a class="navbar__link navbar__link--hover" href="#!">Book a Demo</a></li>
+                    <li><a class="navbar__link navbar__link--hover" href="#!">About</a></li>
+                    <li><a class="navbar__link navbar__link--hover" href="#!">Mission</a></li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <!-- Hero -->
+    <!------------------------------------->
+    <div class="hero">
+        <div class="hero-flex">
+            <div class="hero-title">
+                <h2 class="main-title">The Rebirth of<br>
+                    Insurance</h2>
+            </div>
+            <div class="hero-side">
+                <div class="hero-side-wrap">
+                    <div class="hero-side__copy">
+                        <p>Korr is the first truly versatile insurance management tool. With Korr, insurance professionals develop and manage new and innovative insurance products in minutes.</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#!" class="button button--hover">See the Product</a>
+                        <a href="#!" class="button button--hover">Book a demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-video">
+            <video preload="metadata" muted loop autoplay playsinline><source src="https://player.vimeo.com/progressive_redirect/playback/720723904/rendition/1080p/file.mp4?loc=external&amp;signature=051806af5169661efeed8177b4f3101699d88447a2356ba789017010b925c030" type="video/mp4"></video>
+        </div>
+    </div>
+
+        <!-- Intro -->
+    <!------------------------------------->
+    <div class="intro">
+        <div class="intro-left">
+            <p class="intro-excerpt copy">The insurance industry is almost unrecognizable from 20 years ago — except for the software. Agents and carriers are stuck with the same outdated packages that have limited growth for decades. Korr is leading the revolution.</p>
+            <div class="full-copy-wrap">
+                <div class="tag-wrap">
+                    <h2 class="title-tag" id="why-korr">Why Korr</h2>
+                </div>
+                <div class="copy-wrap">
+                    <p class="copy">Korr started from a single question: <q>How do we make a core insurance platform that enables carriers & agents to operate at the speed of the modern insurance industry?</q> The answers shaped the platform. Insurers can generate new business in minutes, enjoy total cloud integration, and develop innovative insurance products rapidly in a clean, modern and intuitive interface.</p>
+                </div>
+            </div>
+        </div>
+        <div class="intro-links">
+            <ol>
+                <li><a href="#why-korr" class="intro-link intro-link--hover">Why Korr</a></li>
+                <li><a href="#product" class="intro-link intro-link--hover">Product</a></li>
+            </ol>
+        </div>
+    </div>
+    
+        <!-- Products -->
+    <!------------------------------------->
+    <div class="products" id="product">
+        <div class="products-left">
+            <div class="full-copy-wrap">
+                <div class="tag-wrap">
+                    <h2 class="title-tag">Product</h2>
+                </div>
+                <div class="copy-wrap">
+                    <p class="copy">No more wrestling with legacy apps or spending a fortune on custom solutions. With Korr, you get back to what you do best: matching your customers with the perfect plans to put their minds at ease.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-wrap">
+        <ol class="slide-select">
+            <li class="slide-description">
+                <a href="#product1">
+                    <div class="sub-tag-wrap">
+                        <h2 class="title-tag title-tag--active">Concept</h2>
+                    </div>
+                    <div class="sub-copy-wrap">
+                        <p class="sub-copy">Insurance is all about expecting the unexpected. Agents need a platform that lets them rapidly adapt to unforeseen changes. Speed is the guiding philosophy driving Korr.</p>
+                    </div>
+                </a>
+            </li>
+            <li class="slide-description">
+                <a href="#product2">
+                    <div class="sub-tag-wrap">
+                        <h2 class="title-tag title-tag--active">Structure</h2>
+                    </div>
+                    <div class="sub-copy-wrap">
+                        <p class="sub-copy">As a cloud-native web solution, Korr updates seamlessly and is incredibly simple to maintain. Begin with an existing line-of-business configuration or easily develop an entirely new one, Korr's system configuration is data-driven enabling rapid improvements to your business. IT is no longer the governor of the business's ambitions and abilities.</p>
+                    </div>
+                </a>
+            </li>
+            <li class="slide-description">
+                <a href="#product3">
+                    <div class="sub-tag-wrap">
+                        <h2 class="title-tag title-tag--active">Build</h2>
+                    </div>
+                    <div class="sub-copy-wrap">
+                        <p class="sub-copy">Korr leverages AWS, the most reliable infrastructure for cloud-native software. Our schema-less data model ensures that Korr captures each insurer&#39;s unique requirements, and enables rapid and complete migration of historic data from legacy systems — Korr does the hard work of maintaining business continuity while enabling you to fully decommission expensive and obsolete systems.</p>
+                    </div>
+                </a>
+            </li>
+            <li class="slide-description">
+                <a href="#product4">
+                    <div class="sub-tag-wrap">
+                        <h2 class="title-tag title-tag--active">Product</h2>
+                    </div>
+                    <div class="sub-copy-wrap">
+                        <p class="sub-copy">Korr&#39;s interface is intuitive, friendly and productive right out of the box. Our system-wide <q>Google-like search</q> enables users to quickly find the information they require — our app works for them, not the other way around.</p>
+                    </div>
+                </a>
+            </li>
+        </ol>
+        <div class="product-slides">
+            <div class="product-slide prevent" id="product1">
+                <div class="product-slide-top">
+                    <div class="product-slides__title">Concept</div>
+                    <div class="product-slides__number">1/4</div>
+                </div>
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/e56d48426e77fe08c511aeb49e94dc6e2ac7e147-2543x2797.png" alt="Concept slide">
+            </div>
+            <div class="product-slide prevent" id="product2">
+                <div class="product-slide-top">
+                    <div class="product-slides__title">Structure</div>
+                    <div class="product-slides__number">2/4</div>
+                </div>
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/75a77d9f2286032c3f23faf98d0ad924626f5a2d-2543x2797.png" alt="Structure slide">
+            </div>
+            <div class="product-slide prevent" id="product3">
+                <div class="product-slide-top">
+                    <div class="product-slides__title">Build</div>
+                    <div class="product-slides__number">3/4</div>
+                </div>
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/b0c619b33cb39868522610c732ce69dcbeb3f5e5-2543x2797.png" alt="Build slide">
+            </div>
+            <div class="product-slide prevent" id="product4">
+                <div class="product-slide-top">
+                    <div class="product-slides__title">Concept</div>
+                    <div class="product-slides__number">4/4</div>
+                </div>
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/6edcf6d2f0f3e74b5863ede61a6e73a2c1f821df-2543x2797.png" alt="Product slide">
+            </div>
+        </div>
+    </div>
+
+        <!-- Testimonials -->
+    <!------------------------------------->
+    <div class="testimonials">
+
+        <!-- Slide 1 -->
+        <div class="t-wrap t-wrap-fade">
+            <div class="t-left">
+                <div class="t-left-wrap">
+                    <div class="testimonial-title-tag">
+                        <h2 class="title-tag title-tag--dark">Testimonials</h2>
+                    </div>
+                    <div class="testimonial-title">
+                        <p>Chad hersh, Global Life Insurance industry Lead, AWS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="t-copy-wrap">
+
+                <!-- Could change to qouteblock -->
+                <p class="testimonials-copy">While core insurance systems are increasingly available on the cloud, very few are truly cloud native. Being &#39;cloud-enabled&#39; or &#39;cloud optimized&#39; isn&#39;t enough; being cloud-native is critical for achieving the full benefits of the cloud: agility and speed, cost savings, the ability to scale up and scale down as needed, and improved innovation. By leveraging cloud-native services on AWS, Korr can help insurers not only take advantage of these cloud benefits, but can also help them integrate to AWS&#39; large ecosystem of partners, including InsurTechs and established insurance software solutions.</p>
+            </div>
+            <div class="t-right">
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/165ac9ea4dcdf01332df4616b708a16d120cd506-3770x3950.png" alt="AWS services logo">
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+
+        <div class="t-wrap t-wrap-fade hide">
+            <div class="t-left">
+                <div class="t-left-wrap">
+                    <div class="testimonial-title-tag">
+                        <h2 class="title-tag title-tag--dark">Testimonials</h2>
+                    </div>
+                    <div class="testimonial-title">
+                        <p>COO, LTC Carrier, PA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="t-copy-wrap">
+                <p class="testimonials-copy">We chose to partner with Korr for one simple reason: trust in the product and the team. After more than a year with another vendor, we were unable to transition our legacy core to a new platform. Korr came in and solved this problem within weeks, giving us confidence that this partnership would allow us to modernize, grow and innovate to remain competitive. This partnership allows us to focus on what we do best, our insurance business, knowing the technology that supports our business is in the best hands with Korr.</p>
+            </div>
+            <div class="t-right">
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/f50ddaf945f9cc780ca17e52d25ef3e7e58d7fa4-2448x2448.jpg" alt="looking up at architecture">
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+
+        <div class="t-wrap t-wrap-fade hide">
+            <div class="t-left">
+                <div class="t-left-wrap">
+                    <div class="testimonial-title-tag">
+                        <h2 class="title-tag title-tag--dark">Testimonials</h2>
+                    </div>
+                    <div class="testimonial-title">
+                        <p>Insurance Consultant NYC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="t-copy-wrap">
+                <p class="testimonials-copy">With today's modern insurance platforms, it's easy to feel like you're stuck in a maze of navigation layers, complicated workflows, and time-consuming implementations. All of which brings additional challenges with change management and disruption to your business.Having used and implemented several insurance platforms including Guidewire, Majesco and other legacy systems; Korr is what the market has been missing. Korr&#39;s intuitive user experience is the essence of simplicity. Korr is truly a superior experience and one I look forward to using.</p>
+            </div>
+            <div class="t-right">
+                <img src="https://cdn.sanity.io/images/nwzoe7sd/production/f50ddaf945f9cc780ca17e52d25ef3e7e58d7fa4-2448x2448.jpg" alt="looking up at architecture">
+            </div>
+        </div>
+
+        <nav class="t-nav">
+            <ul>
+                <li><a class="t-prev" onclick="plusSlides(-1)">previous</a></li>
+                <li class="t-number">1 / 3</li>
+                <!-- Add in additional numbers and match class for js -->
+                <li class="t-number hide">2 / 3</li>
+                <li class="t-number hide">3 / 3</li>
+                <li><a class="t-next" onclick="plusSlides(1)">next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <!-- Learn More -->
+    <!------------------------------------->
+    <section class="learn-more">
+        <div class="large-copy-wrap">
+            <!-- Change class so it's more universal? -->
+            <div class="itb-gap">
+                <h2 class="title-tag">Learn More</h2>
+            </div>
+            <div class="large-copy">
+                <p>Korr is a Plug and Play Ventures backed insurtech. Our founders are insurance professionals. As it became clear that software vendors were failing the industry, Korr came together in New York to develop and deliver a vision of a truly cloud-first, cloud-native system that is revolutionizing the industry even more substantially than Java and SQL did at the turn of the millennium. See the links below to learn more.</p>
+            </div>
+        </div>
+        <div class="itb">
+            <article class="itb-left">
+                <a href="#!">
+                    <div class="itb__img">
+                        <img src="https://cdn.sanity.io/images/nwzoe7sd/production/d88596c02189769f631856bb874823db6b596f2a-3433x4291.jpg" alt="">
+                    </div>
+                    <div class="itb-text-wrap">
+                        <!-- Maybe change to h3 -->
+                        <div class="itb-gap">
+                            <h2 class="title-tag">Learn more</h2>
+                        </div>
+                        <p class="itb__copy">Korr has firsthand experience with the insurance solutions on offer today. They were great 20 years ago, but so was the BlackBerry. It&#39;s time to evolve. Learn more about Korr's offering.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="itb-right">
+                <a href="#!">
+                    <div class="itb__img">
+                        <img src="https://cdn.sanity.io/images/nwzoe7sd/production/bc4d8aea0b75c29b606cc545f4b9ac08e6139b05-4557x3038.jpg" alt="">
+                    </div>
+                    <div class="itb-text-wrap">
+                        <!-- Maybe change to h3 -->
+                        <div class="itb-gap">
+                            <h2 class="title-tag">Learn more</h2>
+                        </div>
+                        <p class="itb__copy">Korr&#39;s guiding star is an insurance industry operating at the speed of change; an insurance industry where technology enables innovative business ideas, not just be a system of record. Learn more about our mission.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <!------------------------------------->
+    <footer>
+        <div class="footer-main-container">
+            <div class="footer-main__tag">
+                <h2 class="title-tag title-tag--dark">Contact</h2>
+            </div>
+            <div class="footer-main__text">
+                    <h2 class="main-title main-title--dark">
+                        The future of<br>insurance
+                    </h2>
+                    <p class="footer-main__copy">Korr is a cloud-based insurance management app for agents and carriers. With a minimalist UI and adaptable features, Korr helps you get ahead of the industry.</p>
+            </div>
+            <aside class="footer-aside">
+                <div class="footer-aside-1">
+                    <div class="footer-aside__img-container">
+                        <div class="footer-aside__img">
+                            <img alt="Architectural forms in concrete." src="https://www.gokorr.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fnwzoe7sd%2Fproduction%2Fae82b1c52aee66333afeea628da8440322ebe16c-3173x4760.jpg%3Fw%3D800&w=3840&q=75">
+                        </div>
+                    </div>
+                    <div class="footer-aside-text-container">
+                        <div class="footer-aside__tag">
+                            <h2 class="title-tag">Get in touch</h2>
+                        </div>
+                        <div class="footer-aside__copy">
+                            <p>Ready to replace your outdated insurance software with a platform you&#39;ll be excited to use every day? Schedule a demo today.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <nav class="footer-links">
+                <ul>
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Product</a></li>
+                    <li><a href="#!">FAQ</a></li>
+                    <li><a href="#!">About</a></li>
+                    <li><a href="#!">Contact</a></li>
+                    <li><a href="#!">Careers</a></li>
+                    <li><a href="#!">Terms</a></li>
+                    <li><a href="#!">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="copywrite">
+                <p>© 2022 Korr</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

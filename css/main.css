@@ -790,6 +790,10 @@ header {
     font-size: 14px;
 }
 
+.page-width {
+    margin: 1.5em;
+}
+
 /* component */
 /* ------------------------------------ */
 
