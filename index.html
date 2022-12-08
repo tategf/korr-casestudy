@@ -179,7 +179,7 @@
     <div class="testimonials">
 
         <!-- Slide 1 -->
-        <div class="t-wrap t-wrap-fade">
+        <div class="t-wrap t-view">
             <div class="t-left">
                 <div class="t-left-wrap">
                     <div class="testimonial-title-tag">
@@ -202,7 +202,7 @@
 
         <!-- Slide 2 -->
 
-        <div class="t-wrap t-wrap-fade hide">
+        <div class="t-wrap">
             <div class="t-left">
                 <div class="t-left-wrap">
                     <div class="testimonial-title-tag">
@@ -223,7 +223,7 @@
 
         <!-- Slide 3 -->
 
-        <div class="t-wrap t-wrap-fade hide">
+        <div class="t-wrap">
             <div class="t-left">
                 <div class="t-left-wrap">
                     <div class="testimonial-title-tag">
@@ -244,12 +244,12 @@
 
         <nav class="t-nav">
             <ul>
-                <li><a class="t-prev" onclick="plusSlides(-1)">previous</a></li>
+                <li><a class="t-prev">previous</a></li>
                 <li class="t-number">1 / 3</li>
                 <!-- Add in additional numbers and match class for js -->
                 <li class="t-number hide">2 / 3</li>
                 <li class="t-number hide">3 / 3</li>
-                <li><a class="t-next" onclick="plusSlides(1)">next</a></li>
+                <li><a class="t-next">next</a></li>
             </ul>
         </nav>
     </div>
@@ -345,5 +345,31 @@
             </div>
         </div>
     </footer>
+    <script>
+        const prev = document.getElementById("t-prev");
+        const next = document.getElementById("t-next");
+
+        prev.addEventListener("click", function () {
+            /* Find the current card */
+            const currCard = document.querySelector(".t-wrap.t-view");
+            /* Set the prevCard based on its availability */
+            const prevCard = currCard.previousElementSibling
+                ? currCard.previousElementSibling
+                : document.querySelector(".testimonials").lastElementChild;
+            currCard.classList.remove("t-view");
+            prevCard.classList.add("t-view");
+        });
+
+        next.addEventListener("click", function () {
+            /* Find the current card */
+            const currCard = document.querySelector(".t-wrap.t-view");
+            /* Set the nextCard based on its availability */
+            const nextCard = currCard.nextElementSibling
+                ? currCard.nextElementSibling
+                : document.querySelector(".testimonials").firstElementChild;
+            currCard.classList.remove("t-view");
+            nextCard.classList.add("t-view");
+        });
+    </script>
 </body>
 </html>
