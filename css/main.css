@@ -123,10 +123,20 @@ h2 {
 /* header nav section */
 /* ------------------------------------ */
 
-.header-width {
+.navbar {
     margin: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
 
 .header-navbar-container {
     display: flex;
@@ -201,13 +211,6 @@ a, ul, ol, li {
 .navbar-logo--scroll:hover {
     background-color: var(--black);
     color: var(--white);
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
 }
 
 /* Footer section */

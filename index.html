@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Space+Grotesk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
 </head>
 <body>
         <!-- Header Section -->
     <!--/////////////////////////////////-->
-    <header class="header-width">
+    <header id="navbar" class="navbar">
         <div class="logo-container">
             <a href="#!">
                 <div class="logo">
@@ -344,6 +345,9 @@
         </div>
     </footer>
     <script>
+
+        // Testimonials Section:
+        //////////////////////////////////////////////
         const prev = document.getElementById("t-prev");
         const next = document.getElementById("t-next");
 
@@ -368,6 +372,36 @@
             currCard.classList.remove("t-view");
             nextCard.classList.add("t-view");
         });
+
+        // Navbar Section:
+        //////////////////////////////////////////////
+        // const navbar = document.getElementById('navbar')
+
+        // // OnScroll event handler
+        // const onScroll = () => {
+
+        //     // Get scroll value
+        //     const scroll = document.documentElement.scrollTop
+
+        //     // If scroll value is more than 0 - add class
+        //     if (scroll > 0) {
+        //         navbar.classList.add("navbar--fixed");
+        //     } else {
+        //         navbar.classList.remove("navbar--fixed")
+        //     }
+        // }
+
+        // // Use the function
+        // window.addEventListener('navbar--fixed', onScroll)
+
+        $(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+       $('#navbar').addClass('fixed');
+    } else {
+       $('#navbar').removeClass('fixed');
+    }
+});
+
     </script>
 </body>
 </html>
