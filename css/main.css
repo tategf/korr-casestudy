@@ -131,7 +131,7 @@ h2 {
     gap: 1em;
 }
 
-.fixed {
+.navbar--fixed {
     position: fixed;
     top: 0;
     z-index: 100;
@@ -141,6 +141,10 @@ h2 {
 .header-navbar-container {
     display: flex;
     gap: .5em;
+}
+
+.hnc--center {
+    margin: auto;
 }
 
 .navbar-list, .navbar-logo {
@@ -202,15 +206,18 @@ a, ul, ol, li {
 
 .navbar-list:hover {
     color: #888;
+    transition: all .3s cubic-bezier(.4,0,0,1);
 }
 
 .navbar__link--hover:hover {
     color: #000;
+    transition: all .3s cubic-bezier(.4,0,0,1);
 }
 
 .navbar-logo--scroll:hover {
     background-color: var(--black);
     color: var(--white);
+    transition: all .3s cubic-bezier(.4,0,0,1);
 }
 
 /* Footer section */
@@ -355,6 +362,10 @@ a, ul, ol, li {
     margin: 1.5em;
 }
 
+.hero--top {
+    padding-top: 5em;
+}
+
 .hero-flex {
     display: flex;
     /* flex-wrap:wrap; */
@@ -407,6 +418,8 @@ a, ul, ol, li {
     border-radius: var(--radius3);
     overflow: hidden;
     padding-bottom: 38%;
+    /* required for border radius and overflow hidden to work in safari */
+    -webkit-mask-image: radial-gradient(white, black);
 }
 
 .hero-video video {

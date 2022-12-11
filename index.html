@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Space+Grotesk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script> -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- Still not working? -->
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
 </head>
 <body>
         <!-- Header Section -->
@@ -219,7 +223,7 @@
             </div>
             <!-- Slide 3 -->
             <div class="t-wrap">
-                
+
                 <div class="testimonial-title-tag">
                     <h2 class="title-tag title-tag--dark">Testimonials</h2>
                 </div>
@@ -388,13 +392,45 @@
         // // Use the function
         // window.addEventListener('navbar--fixed', onScroll)
 
+            $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+        $('#navbar').addClass('navbar--fixed');
+        } else {
+        $('#navbar').removeClass('navbar--fixed');
+        }
+        });
+
         $(window).scroll(function(){
-    if ($(this).scrollTop() > 1) {
-       $('#navbar').addClass('fixed');
-    } else {
-       $('#navbar').removeClass('fixed');
-    }
-});
+        if ($(this).scrollTop() > 50) {
+        $('.logo-container').addClass('hide');
+        } else {
+        $('.logo-container').removeClass('hide');
+        }
+        });
+
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+        $('.header-navbar-container').addClass('hnc--center');
+        } else {
+        $('.header-navbar-container').removeClass('hnc--center');
+        }
+        });
+
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+        $('.navbar-logo').addClass('navbar-logo--scroll');
+        } else {
+        $('.navbar-logo').removeClass('navbar-logo--scroll');
+        }
+        });
+
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+        $('.hero').addClass('hero--top');
+        } else {
+        $('.hero').removeClass('hero--top');
+        }
+        });
 
     </script>
 </body>
