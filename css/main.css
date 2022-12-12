@@ -23,8 +23,12 @@ html {
     box-sizing: inherit;
 }
 
-/* Typeography */
+/* Typeography / Other */
 /* ------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: var(--font-sans-serif);
@@ -1184,14 +1188,27 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
     }
 }
 
+@media only screen and (max-width: 768px) {
+
+    .main-title {
+        font-size: 32px;
+    }
+    
+    .itb__copy, .sub-copy {
+        font-size: 14px;
+    }
+
+    .copy {
+        font-size: 20px;
+    }
+
+    .testimonials-copy {
+        font-size: 16px;
+    }
+}
+
 /* component */
 /* ------------------------------------ */
-
-.comp-base {
-    /* temp for showcase */
-    scroll-behavior: smooth;
-    /* background-color: #282a28; */
-}
 
 .component__name {
     font-family: var(--font-mono);
