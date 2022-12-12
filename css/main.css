@@ -459,7 +459,7 @@ a, ul, ol, li {
 
 .full-copy-wrap {
     /* temp */
-    padding: 2em 0em;
+    padding: 1em 0em;
 }
 
 .full-copy-wrap>.tag-wrap {
@@ -576,10 +576,25 @@ a, ul, ol, li {
 .product-slides {
     grid-column: 9 / 12;
     position: relative;
+    /* overflow: hidden;
+    border-radius: var(--radius3); */
 }
+
+/* Consider fixing image border setup */
 
 .product-slide {
     position: absolute;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius3);
+}
+
+.product-slide>img {
+    max-width: 104%;
+    width: 104%;
+    min-width: 104%;
+    /* position: inherit; */
+    margin-left: -2%;
 }
 
 .product-slide-top {
@@ -780,10 +795,6 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
     line-height: inherit;
 }
 
-.t-prev:hover, .t-next:hover {
-    text-decoration: underline;
-}
-
 .t-number {
     grid-column: 5 / 6;
     /* text-align: right; */
@@ -801,6 +812,8 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
 
 .t-prev, .t-next {
     cursor: pointer;
+    text-decoration: underline;
+    font-weight: 300;
 }
 
 /* used where important is needed */
@@ -829,7 +842,7 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
 
 .large-copy-wrap {
     padding-top: 8em;
-    padding-bottom: 4em;
+    padding-bottom: 3.5em;
 }
 
 .large-copy {
@@ -885,7 +898,7 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
 }
 
 .itb__copy {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Screen Sizes */
@@ -1165,6 +1178,10 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
     .product-slide-top {
         padding: 2.5em;
     }
+
+    .large-copy>p {
+        font-size: 16px;
+    }
 }
 
 /* component */
@@ -1200,6 +1217,16 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
     border: 1px solid var(--gray3);
     background-color: white;
     margin-bottom: 1em;
+    overflow: scroll;
+    min-width: 100%;
+}
+
+/* For overflow in comp page so nothing pushes out of the code window */
+.cc-wrap {
+    min-width: 505px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .component__code img {
