@@ -102,7 +102,7 @@ h2 {
     border: 1px solid var(--black);
     display: inline-block;
     width: fit-content;
-    padding: 5px 5px 3px;
+    padding: 5px 5px 2px;
     border-radius: var(--radius1)
 }
 
@@ -441,20 +441,21 @@ a, ul, ol, li {
 .intro, .products {
     margin: 1.5em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* change to 3, 1fr at smaller screen size */
     gap: 1.5em;
 }
 
 .intro-excerpt {
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 
 .intro-left {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 
 .intro-links {
-    grid-column: 3 / -1;
+    grid-column: 2 / -1;
 }
 
 .intro-links ol {
@@ -464,14 +465,21 @@ a, ul, ol, li {
 .full-copy-wrap {
     /* temp */
     padding: 1em 0em;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5em;
+
+    margin: 1em 0em;
 }
 
 .full-copy-wrap>.tag-wrap {
     margin-bottom: 1em;
+    grid-column: 1 / 2;
 }
 
 .full-copy-wrap:first-child {
-    margin-top: 3em;
+    margin-top: 2.5em;
 }
 
 .tag-wrap {
@@ -480,6 +488,7 @@ a, ul, ol, li {
 
 .copy-wrap {
     display: block;
+    grid-column: 2 / -1;
 }
 
 .intro-link {
@@ -517,7 +526,7 @@ a, ul, ol, li {
 /* .products grid setup is above in intro section to reduce redundency */
 
 .products-left {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 
 .slide-wrap {
@@ -527,7 +536,7 @@ a, ul, ol, li {
     grid-template-columns: repeat(12,minmax(0,1fr));
     grid-template-rows: min-content;
     grid-column-gap: 1.5em;
-    margin: 0em 1.5em 6em;
+    margin: 0em 1.5em 8em;
 }
 
 .slide-wrap a {
@@ -542,7 +551,7 @@ a, ul, ol, li {
 }
 
 .slide-select {
-    grid-column: 2 / 8;
+    grid-column: 2 / 7;
 }
 
 .slide-description {
@@ -550,7 +559,7 @@ a, ul, ol, li {
     display: grid;
     grid-template-columns: repeat(6,minmax(0,1fr));
     grid-column-gap: 1.5em;
-    padding: 2em 0em;
+    padding: 0em 0em 3em;
     cursor: pointer;
 }
 
@@ -578,7 +587,7 @@ a, ul, ol, li {
 } */
 
 .product-slides {
-    grid-column: 9 / 12;
+    grid-column: 8 / 11;
     position: relative;
     /* overflow: hidden;
     border-radius: var(--radius3); */
@@ -907,6 +916,28 @@ input[type=radio]:checked + .sub-tag-wrap>.title-tag--active {
 
 /* Screen Sizes */
 /* ------------------------------------ */
+
+@media only screen and (max-width: 1280px) {
+    .intro, .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .intro-left, .products-left {
+        grid-column: 1 / 3;
+    }
+    .intro-links {
+        grid-column: 3 / -1;
+    }
+    .full-copy-wrap {
+        display: block;
+    }
+
+    .slide-select {
+        grid-column: 2 / 8;
+    }
+    .product-slides {
+        grid-column: 9 / -1;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
 
